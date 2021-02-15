@@ -1,11 +1,10 @@
 // reaching into the DOM
-const list = document.querySelector('#msg-list ul');
-const addForm = document.forms['add-msg'];
+
 
 // function to add messages
-function addMessages() {
-      this.preventDefault();
-  
+function addMessages(e) {
+      
+      const addForm = document.forms['add-msg'];
       // create elements
       const value = addForm.querySelector('input[type="text"]').value;
       const li = document.createElement('li');
@@ -23,6 +22,7 @@ function addMessages() {
 }
 
 document.addEventListener('DOMContentLoaded', function(){
-  list;
-  addForm.addEventListener('submit', addMessages);
+  
+  const addForm = document.forms['add-msg'];
+  addForm.addEventListener('submit', addMessages());
 });
