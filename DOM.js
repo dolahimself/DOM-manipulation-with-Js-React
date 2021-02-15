@@ -1,12 +1,10 @@
-document.addEventListener('DOMContentLoaded', function(){
+// reaching into the DOM
+const list = document.querySelector('#msg-list ul');
+const addForm = document.forms['add-msg'];
 
-    const list = document.querySelector('#msg-list ul');
-    const forms = document.forms;
-  
-    // add messages
-    const addForm = forms['add-msg'];
-    addForm.addEventListener('submit', function(e){
-      e.preventDefault();
+// function to add messages
+function addMessages() {
+      this.preventDefault();
   
       // create elements
       const value = addForm.querySelector('input[type="text"]').value;
@@ -22,5 +20,9 @@ document.addEventListener('DOMContentLoaded', function(){
       // append to DOM
       li.appendChild(msgName);
       list.appendChild(li);
-    });
-})
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  list;
+  addForm.addEventListener('submit', addMessages);
+});
